@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        
+        <variable
+            name="profileLayout"
+            type="com.hard.code.tech.animationlayouts.AnimateLayoutListener" />
+
+        <variable
+            name="btnSmallIcon"
+            type="com.hard.code.tech.animationlayouts.AnimateLayoutListener" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".PageOneActivity">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearProfile"
+            android:onClick="@{profileLayout::onProfileLayoutSelected}"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:translationX="-300dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUserPhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/russ" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="@string/russian_spy"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="@string/russianspy"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtExplore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/explore"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtAddOns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/add_ons"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Messages"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Settings"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Sign Out"
+                android:textColor="@android:color/white" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/mainContent"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:translationX="-300dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainItemContents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{btnSmallIcon::onSmallBtnSelected}"
+               >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnProfilePhoto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/russ"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/russian_spy"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/btnProfilePhoto"
+                    app:layout_constraintTop_toTopOf="@+id/btnProfilePhoto" />
+
+                <TextView
+                    android:id="@+id/txtProfileUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/russianspy"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/btnProfilePhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProfileName" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Design In the making"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="@+id/btnProfilePhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/btnProfilePhoto" />
+
+                <TextView
+                    android:id="@+id/txtSmtin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Exploring the beauty of design"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <ImageView
+                    android:id="@+id/imgBell"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imgForum"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSmtin"
+                    app:srcCompat="@drawable/ic_add_alert" />
+
+                <ImageView
+                    android:id="@+id/imgForum"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBell"
+                    app:layout_constraintEnd_toStartOf="@+id/imgEdit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgBell"
+                    app:layout_constraintTop_toTopOf="@+id/imgBell"
+                    app:srcCompat="@drawable/ic_forum" />
+
+                <ImageView
+                    android:id="@+id/imgEdit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBell"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgForum"
+                    app:layout_constraintTop_toTopOf="@+id/imgBell"
+                    app:srcCompat="@drawable/ic_create" />
+
+                <TextView
+                    android:id="@+id/txtSome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/add_ons"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtSmtin"
+                    app:layout_constraintTop_toBottomOf="@+id/imgBell" />
+
+                <ImageView
+                    android:id="@+id/imgWhatsHot"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imgCloud"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSome"
+                    app:srcCompat="@drawable/ic_whatshot" />
+
+                <ImageView
+                    android:id="@+id/imgCloud"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgWhatsHot"
+                    app:layout_constraintEnd_toStartOf="@+id/imgVpn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgWhatsHot"
+                    app:layout_constraintTop_toTopOf="@+id/imgWhatsHot"
+                    app:srcCompat="@drawable/ic_cloud" />
+
+                <ImageView
+                    android:id="@+id/imgVpn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgWhatsHot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgCloud"
+                    app:layout_constraintTop_toTopOf="@+id/imgWhatsHot"
+                    app:srcCompat="@drawable/ic_vpn" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="onRipple"
+            type="com.hard.code.tech.animationlayouts.AnimateLayoutListener" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_emergency"
+    tools:context=".PageTwoActivity">
+
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/rippleContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rb_color="#FFD600"
+        app:rb_duration="3000"
+        app:rb_radius="64dp"
+        app:rb_rippleAmount="6"
+        app:rb_scale="6">
+
+    </com.skyfishjy.library.RippleBackground>
+
+
+    <ImageView
+        android:id="@+id/emergencyBtn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="@{onRipple::onEmergencyPressed}"
+        android:src="@drawable/sosos"
+        app:layout_constraintBottom_toTopOf="@+id/txtPress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rippleContent" />
+
+    <TextView
+        android:id="@+id/txtPress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/press_the_sos_button_in_case_of_emergency"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/rippleContent"
+        app:layout_constraintEnd_toEndOf="@+id/rippleContent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="clickEvent"
+            type="com.hard.code.tech.animationlayouts.AnimateLayoutListener" />
+    </data>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/curve_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/startLayout"
+        android:alpha="0"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".StartScreen">
+
+        <Button
+            android:id="@+id/gotoPageOne"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/page_one"
+            android:onClick="@{clickEvent::onPageOneBtnClicked}"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageTwo"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="@{clickEvent::onPageTwoBtnClicked}"
+            android:background="@drawable/btn_two"
+            android:text="@string/page_two"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageThree"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_three"
+            android:onClick="@{clickEvent::onPageThreeBtnClicked}"
+            android:text="Page Three"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageFour"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="@{clickEvent::onPageFourBtnClicked}"
+            android:background="@drawable/btn_four"
+            android:text="Page Four"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/gotoPageFive"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_five"
+            android:text="Page five"
+            android:onClick="@{clickEvent::onPageFiveBtnClicked}"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageSix"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageSeven"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageEight"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageNine"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageTen"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageEleven"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageTwelve"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageThirteen"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoPageFourteen"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_one"
+            android:text="@string/side_bar_animation"
+            android:textAllCaps="false" />
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+</layout>
